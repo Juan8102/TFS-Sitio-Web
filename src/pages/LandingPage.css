@@ -1,0 +1,75 @@
+/* --- ESTILOS DE SECCIONES MODULARES (Importar en LandingPage.jsx) --- */
+
+.section {
+	padding: 60px 0;
+	min-height: 300px;
+	text-align: center;
+	transition: background-color 0.3s;
+	position: relative;
+}
+
+.section h2 {
+	font-size: 2em;
+	margin-bottom: 20px;
+}
+
+/* Clase para usar imagen de fondo en la sección */
+.custom-bg {
+	background-size: cover !important;
+	background-position: center !important;
+	color: #fff;
+	position: relative;
+	z-index: 1;
+}
+
+.custom-bg::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.4);
+	z-index: -1;
+}
+
+/* Contenedor Flex para Texto e Imagen Principal dentro de la Sección */
+.section-content-wrapper {
+	display: flex;
+	align-items: center;
+	text-align: left;
+	gap: 40px;
+}
+
+.section-text-content {
+	flex: 1;
+}
+
+.section-image-left {
+	text-align: right;
+}
+
+.section-image-right {
+	text-align: left;
+}
+
+.section-image-wrapper {
+	flex-shrink: 0;
+	max-width: 40%;
+}
+
+.section-image-wrapper img {
+	width: 70%;
+	height: auto;
+	display: block;
+	border-radius: 8px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Clases para alternar colores de fondo */
+.section-light {
+	background-color: #fff;
+	color: #333;
+}
+
+.section-dark {
+	background-color: #333;
+	color: #fff;
+}

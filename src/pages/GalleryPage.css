@@ -1,0 +1,68 @@
+/* --- ESTILOS ESPECÍFICOS DE LA GALERÍA (GalleryPage.jsx) --- */
+
+.gallery-page-content {
+    /* Usa la misma convención de padding que tus otras secciones */
+    padding-top: 80px;  
+    padding-bottom: 80px; 
+    text-align: center;
+    /* Estilos de fondo si no usas section-light */
+    background-color: #fff;
+    color: #333;
+}
+
+.gallery-page-content h2 {
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    color: #333;
+}
+
+/* 1. Contenedor de la Cuadrícula (CSS Grid) */
+.gallery-grid-2-col {
+    display: grid;
+    /* Define dos columnas de igual ancho */
+    grid-template-columns: 1fr 1fr;
+    /* Margen de 20px entre columnas y filas (el 'gap') */
+    gap: 20px;
+    /* Padding para el margen exterior (paredes) de 20px */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 2. ENVOLTORIO DE CADA IMAGEN: Relación de Aspecto Fija (4:3) */
+.gallery-item-wrapper {
+    overflow: hidden; 
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    
+    /* CLAVE: Crea un contenedor con una relación de aspecto fija (ej: 4:3) */
+    position: relative; 
+    padding-bottom: 75%; /* Define la altura como 75% del ancho (4:3) */
+    height: 0; 
+}
+
+/* 3. LA IMAGEN MISMA: Cubrir el contenedor y evitar distorsión */
+.gallery-image {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    /* CLAVE: Asegura que la imagen cubra completamente el contenedor sin distorsionarse */
+    object-fit: cover; 
+    display: block;
+    transition: transform 0.3s;
+}
+
+.gallery-image:hover {
+    transform: scale(1.05); /* Efecto de zoom al pasar el ratón */
+}
+
+/* Adaptabilidad: Una columna en dispositivos pequeños */
+@media (max-width: 768px) {
+    .gallery-grid-2-col {
+        grid-template-columns: 1fr; 
+    }
+}

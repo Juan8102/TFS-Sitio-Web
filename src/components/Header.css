@@ -1,0 +1,27 @@
+/* --- ESTILOS VISUALES DEL ENCABEZADO (Importar en Header.jsx) --- */
+
+.logo-text-wrapper {
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+}
+
+.logo-text {
+	font-size: 1.8em;
+	font-weight: bold;
+	color: #fff;
+}
+
+.nav-link {
+	color: #fff;
+	text-decoration: none;
+	margin-left: 40px;
+	font-size: var(--nav-link-size);
+	text-transform: uppercase;
+	font-weight: bold;
+	transition: color 0.3s;
+}
+
+.nav-link:hover {
+	color: #d48300;;
+}

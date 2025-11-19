@@ -1,0 +1,38 @@
+.footer {
+	background: #222;
+	color: #ccc;
+	padding: 30px 0;
+}
+
+.footer-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 90%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.footer-social {
+	display: flex;
+	gap: 15px;
+}
+
+.footer-social a {
+	color: #ccc;
+	font-size: 1.5em;
+	transition: color 0.3s;
+}
+
+.footer-social a:hover {
+	color: #d48300;
+}
+
+.footer-info {
+	text-align: right;
+	font-size: 0.9em;
+}
+
+.footer-info p {
+	margin: 5px 0;
+}

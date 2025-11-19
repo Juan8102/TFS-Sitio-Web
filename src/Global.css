@@ -1,0 +1,81 @@
+/* --- 1. ESTILOS GLOBALES Y RESET --- */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: Arial, sans-serif;
+	line-height: 1.6;
+	color: #333;
+	background-color: #f4f4f4;
+}
+
+.container {
+	width: 80%;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 20px 0;
+}
+
+/* --- 2. VARIABLES GLOBALES Y ALTURA FIJA DEL HEADER --- */
+:root {
+	--nav-link-size: 1.0em;
+    /* DEFINIMOS LA ALTURA EXACTA DEL ENCABEZADO */
+    --header-height: 70px; 
+}
+
+/* --- 3. REGLAS DE ESTRUCTURA (Header) --- */
+.header {
+    /* REGLAS MÍNIMAS PARA POSICIONAMIENTO Y TAMAÑO GLOBAL */
+	background: #333; /* Estilo visual que se puede mover, pero se mantiene para el color base */
+	color: #fff;
+	height: var(--header-height);
+	padding: 0;
+    
+	/* CLAVE: Fija el header en la parte superior */
+	position: fixed; 
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+}
+
+/* Ajusta el contenedor dentro de la altura fija del header */
+.header-container {
+    height: 100%; 
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+/* --- 4. REGLAS DE ESTRUCTURA (Hero Section) --- */
+.hero-section {
+    /* ALTURA CLAVE: 100% de la ventana menos la altura del header */
+    height: calc(100vh - var(--header-height)); 
+    
+    /* MARGEN CLAVE: Empuja la sección hacia abajo, liberando el espacio que ocupa el header fijo */
+    margin-top: var(--header-height); 
+
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-section::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.5);
+	z-index: -1;
+}
