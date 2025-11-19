@@ -1,48 +1,59 @@
-/* --- ESTILOS ESPECÍFICOS DE LA GALERÍA (GalleryPage.jsx) --- */
-
+/* --- AJUSTE DE CONTENEDOR PRINCIPAL --- */
 .gallery-page-content {
-    /* Usa la misma convención de padding que tus otras secciones */
+    /* CLAVE: Empuja el contenido hacia abajo (80px > 70px del header) */
     padding-top: 80px;  
     padding-bottom: 80px; 
     text-align: center;
-    /* Estilos de fondo si no usas section-light */
     background-color: #fff;
     color: #333;
 }
 
-.gallery-page-content h2 {
-    margin-bottom: 30px;
+/* --- NUEVO CONTENEDOR DE TÍTULOS DE PÁGINA (Altura Fija) --- */
+.page-header-content {
+    /* CLAVE: Establece una altura mínima fija (100px) para el área de títulos */
+    min-height: 100px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente el título/subtítulo */
+    align-items: center;
+    width: 100%;
+    margin-top: 70px;
+    margin-bottom: 30px; /* Espacio antes de que inicie la cuadrícula */
+}
+
+/* Ajustes de tipografía */
+.page-header-content h2 {
+    margin: 0; 
     font-size: 2.5em;
     color: #333;
 }
 
-/* 1. Contenedor de la Cuadrícula (CSS Grid) */
+.page-header-content p {
+    margin: 5px 0 0 0; 
+}
+
+/* --- ESTILOS DE LA CUADRÍCULA --- */
 .gallery-grid-2-col {
     display: grid;
-    /* Define dos columnas de igual ancho */
     grid-template-columns: 1fr 1fr;
-    /* Margen de 20px entre columnas y filas (el 'gap') */
     gap: 20px;
-    /* Padding para el margen exterior (paredes) de 20px */
     padding: 20px;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* 2. ENVOLTORIO DE CADA IMAGEN: Relación de Aspecto Fija (4:3) */
+/* ENVOLTORIO DE CADA IMAGEN: Relación de Aspecto Fija (4:3) */
 .gallery-item-wrapper {
     overflow: hidden; 
     border-radius: 4px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
-    
-    /* CLAVE: Crea un contenedor con una relación de aspecto fija (ej: 4:3) */
     position: relative; 
-    padding-bottom: 75%; /* Define la altura como 75% del ancho (4:3) */
+    padding-bottom: 75%; /* Altura fija relativa al ancho (4:3) */
     height: 0; 
 }
 
-/* 3. LA IMAGEN MISMA: Cubrir el contenedor y evitar distorsión */
+/* LA IMAGEN MISMA: Cubrir el contenedor y evitar distorsión */
 .gallery-image {
     position: absolute; 
     top: 0;
@@ -50,14 +61,13 @@
     width: 100%;
     height: 100%;
     
-    /* CLAVE: Asegura que la imagen cubra completamente el contenedor sin distorsionarse */
-    object-fit: cover; 
+    object-fit: cover; /* Asegura que la imagen cubra completamente */
     display: block;
     transition: transform 0.3s;
 }
 
 .gallery-image:hover {
-    transform: scale(1.05); /* Efecto de zoom al pasar el ratón */
+    transform: scale(1.05);
 }
 
 /* Adaptabilidad: Una columna en dispositivos pequeños */

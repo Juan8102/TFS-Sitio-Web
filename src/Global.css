@@ -52,30 +52,3 @@ body {
     align-items: center;
     margin: 0 auto;
 }
-
-/* --- 4. REGLAS DE ESTRUCTURA (Hero Section) --- */
-.hero-section {
-    /* ALTURA CLAVE: 100% de la ventana menos la altura del header */
-    height: calc(100vh - var(--header-height)); 
-    
-    /* MARGEN CLAVE: Empuja la sección hacia abajo, liberando el espacio que ocupa el header fijo */
-    margin-top: var(--header-height); 
-
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #fff;
-    position: relative;
-    z-index: 1;
-}
-
-.hero-section::before {
-	content: "";
-	position: absolute;
-	inset: 0;
-	background: rgba(0, 0, 0, 0.5);
-	z-index: -1;
-}

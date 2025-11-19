@@ -9,7 +9,7 @@ const LandingPage = () => {
             <section 
                 className="hero-section" 
                 // Estilo en línea convertido a objeto JS
-                style={{backgroundImage: "url('/images/fondo_1.png')"}}
+                style={{backgroundImage: "url('images/fondo_1.png')"}}
             >
                 <div className="hero-content">
                     <h1 className="hero-title">Task Force Sentinel</h1>
@@ -22,7 +22,7 @@ const LandingPage = () => {
                 id="seccion-1" 
                 className="section section-dark custom-bg"
                 // Estilo en línea convertido a objeto JS
-                style={{backgroundImage: "url('/images/fondo_seccion_2.webp')"}}
+                style={{backgroundImage: "url('images/fondo_seccion_2.webp')"}}
             >
                 <div className="container section-content-wrapper">
                     <div className="section-text-content section-image-right">
@@ -31,7 +31,7 @@ const LandingPage = () => {
                     </div>
                     <div className="section-image-wrapper">
                         {/* Ruta actualizada a absoluta: /images/... */}
-                        <img src="/images/logo.png" alt="Imagen 1" /> 
+                        <img src="images/logo.png" alt="Imagen 1" /> 
                     </div>
                 </div>
             </section>
@@ -41,7 +41,7 @@ const LandingPage = () => {
                 <div className="container section-content-wrapper reverse-layout">
                     <div className="section-image-wrapper">
                         {/* Ruta actualizada a absoluta: /images/... */}
-                        <img src="/images/logo.png" alt="Imagen 2" />
+                        <img src="images/logo.png" alt="Imagen 2" />
                     </div>
                     <div className="section-text-content section-image-left">
                         <h2>Misión</h2>
