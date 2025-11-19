@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-const repoName = 'tfs-website';
+const repoName = 'TFS-Sitio-Web';
 
 // https://vite.dev/config/
 export default defineConfig({
