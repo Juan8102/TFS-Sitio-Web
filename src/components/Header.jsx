@@ -1,6 +1,4 @@
 import React from 'react';
-
-// 1. Importar el componente Link
 import { Link } from 'react-router-dom'; 
 import './Header.css';
 
@@ -8,17 +6,28 @@ const Header = () => {
     return (
         <header className="header">
             <div className="header-container">
-                {/* Usamos Link en lugar de <a> para navegar en React */}
-                <Link to="/" className="logo-text-wrapper"> 
-                    <span className="logo-text">Task Force Sentinel</span>
-                </Link>
-                <nav className="nav">
-                    {/* Enlaces de navegación usando Link y la ruta definida en Routes */}
+                
+                {/* 1. Navegación Izquierda: Inicio y Galería */}
+                <nav className="nav nav-left">
                     <Link to="/" className="nav-link">Inicio</Link> 
                     <Link to="/galeria" className="nav-link">Galería</Link>
-                    <Link to="/formulario" className="nav-link">Formulario de ingreso</Link>
+                </nav>
+
+                {/* 2. Logo Central */}
+                <Link to="/" className="logo-text-wrapper"> 
+                    <img 
+                        src="images/logo.png" 
+                        alt="Logo de Task Force Sentinel" 
+                        className="header-logo" 
+                    />
+                </Link>
+
+                {/* 3. Navegación Derecha: Formulario y Políticas */}
+                <nav className="nav nav-right">
+                    <Link to="/formulario" className="nav-link">Sé parte</Link>
                     <Link to="/politicas" className="nav-link">Políticas</Link>
                 </nav>
+
             </div>
         </header>
     );

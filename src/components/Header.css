@@ -1,21 +1,64 @@
-/* --- ESTILOS VISUALES DEL ENCABEZADO (Importar en Header.jsx) --- */
+/* --- AJUSTE CLAVE PARA PEGAR LOS LINKS A LOS LATERALES --- */
+.header-container {
+    height: 100%;
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    
+    /* CLAVE: Distribuye el espacio entre los 3 elementos. 
+       Esto empuja nav-left al inicio, logo al centro, y nav-right al final. */
+    justify-content: space-between; 
+    
+    align-items: center;
+    margin: 0 auto;
+}
 
+/* Contenedor del logo */
 .logo-text-wrapper {
-	text-decoration: none;
-	display: flex;
-	align-items: center;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0; /* Impide que el logo se encoja */
+    /* Usar margin: auto en un Flexbox lo centrará perfectamente,
+       pero usaremos space-between en el padre para mayor control. */
 }
 
-.logo-text {
-	font-size: 1.8em;
-	font-weight: bold;
-	color: #fff;
+/* Estilos de la imagen del logo */
+.header-logo {
+    height: 60px; 
+    width: auto; 
+    display: block;
+    margin: 0; 
 }
 
+/* Estilos de la navegación (Contenedores nav-left y nav-right) */
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* Espacio entre los links dentro de cada nav */
+}
+
+/* CLAVE: Eliminamos flex-grow y max-width para que los navs solo ocupen el espacio de sus links. */
+.nav-left, .nav-right {
+    /* No necesitan crecer. Su posición la define el space-between del padre. */
+    flex-grow: 0; 
+}
+
+/* Navegación Izquierda: Los links se quedan a la izquierda del logo (inicio del contenedor) */
+.nav-left {
+    justify-content: flex-start; /* Asegura que los links estén al inicio del nav */
+}
+
+/* Navegación Derecha: Los links se quedan a la derecha del logo (final del contenedor) */
+.nav-right {
+    justify-content: flex-end; /* Asegura que los links estén al final del nav */
+}
+
+/* Estilos del link */
 .nav-link {
 	color: #fff;
 	text-decoration: none;
-	margin-left: 40px;
+	margin: 0; 
 	font-size: var(--nav-link-size);
 	text-transform: uppercase;
 	font-weight: bold;
@@ -23,5 +66,5 @@
 }
 
 .nav-link:hover {
-	color: #d48300;;
+	color: #d48300;
 }

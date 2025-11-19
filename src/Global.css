@@ -21,15 +21,15 @@ body {
 
 /* --- 2. VARIABLES GLOBALES Y ALTURA FIJA DEL HEADER --- */
 :root {
-	--nav-link-size: 1.0em;
+	--nav-link-size: 1.1em;
     /* DEFINIMOS LA ALTURA EXACTA DEL ENCABEZADO */
-    --header-height: 70px; 
+    --header-height: 80px; 
 }
 
 /* --- 3. REGLAS DE ESTRUCTURA (Header) --- */
 .header {
     /* REGLAS MÍNIMAS PARA POSICIONAMIENTO Y TAMAÑO GLOBAL */
-	background: #333; /* Estilo visual que se puede mover, pero se mantiene para el color base */
+	background: #121212; /* Estilo visual que se puede mover, pero se mantiene para el color base */
 	color: #fff;
 	height: var(--header-height);
 	padding: 0;
