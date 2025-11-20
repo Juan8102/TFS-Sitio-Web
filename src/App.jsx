@@ -6,14 +6,10 @@ import Layout from './components/Layout.jsx';
 import LandingPage from './pages/LandingPage.jsx'; 
 import GalleryPage from './pages/GalleryPage.jsx'; 
 
-// Define la ruta base para React Router
-// Utiliza el nombre exacto del repositorio de GitHub
-const BASE_PATH = "/TFS-Sitio-Web"; 
-
 function App() {
     return (
-        // CLAVE: BrowserRouter usa la ruta base
-        <BrowserRouter basename={BASE_PATH}> 
+        // CLAVE: ELIMINAMOS basename. BrowserRouter trabajará con las rutas relativas.
+        <BrowserRouter> 
             <Layout>
                 <Routes>
                     <Route path="/" element={<LandingPage />} /> 
