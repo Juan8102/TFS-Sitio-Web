@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
@@ -9,7 +8,7 @@ import GalleryPage from './pages/GalleryPage.jsx';
 
 // Define la ruta base para React Router
 // Utiliza el nombre exacto del repositorio de GitHub
-const BASE_PATH = "/TFS-Sitio-Web/"; 
+const BASE_PATH = "/TFS-Sitio-Web"; 
 
 function App() {
     return (

@@ -1,4 +1,3 @@
-// src/main.jsx (El punto de partida de la aplicación)
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App.jsx'; 
