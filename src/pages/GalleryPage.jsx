@@ -15,29 +15,28 @@ const GalleryPage = () => {
     ];
 
     return (
-        // Contenedor principal de la página, usa la clase gallery-page-content
-        <div className="gallery-page-content container section-light">
-            
-            {/* Contenedor de Altura Fija para Títulos */}
-            <div className="page-header-content">
-                <h2>Galería de Misiones</h2>
-                <p>Un vistazo a la acción y el entrenamiento de Task Force Sentinel.</p>
+        <>
+            <TitleUpdater title="T.F.S | Galería"/>
+
+            <div className="gallery-page-content container section-light">
+                <div className="page-header-content">
+                    <h2>Galería de Misiones</h2>
+                    <p>Un vistazo a la acción y el entrenamiento de Task Force Sentinel.</p>
+                </div>
+                
+                <div className="gallery-grid-2-col">
+                    {images.map((imageName, index) => (
+                        <div key={index} className="gallery-item-wrapper">
+                            <img 
+                                src={`images/${imageName}`} 
+                                alt={`Imagen de Galería ${index + 1}`} 
+                                className="gallery-image"
+                            />
+                        </div>
+                    ))}
+                </div>
             </div>
-            
-            {/* Contenedor de la Cuadrícula */}
-            <div className="gallery-grid-2-col">
-                {images.map((imageName, index) => (
-                    <div key={index} className="gallery-item-wrapper">
-                        {/* Ruta absoluta para las imágenes */}
-                        <img 
-                            src={`images/${imageName}`} 
-                            alt={`Imagen de Galería ${index + 1}`} 
-                            className="gallery-image"
-                        />
-                    </div>
-                ))}
-            </div>
-        </div>
+        </>
     );
 }
 

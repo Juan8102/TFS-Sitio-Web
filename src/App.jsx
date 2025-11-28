@@ -8,7 +8,6 @@ import GalleryPage from './pages/GalleryPage.jsx';
 
 function App() {
     return (
-        // CLAVE: ELIMINAMOS basename. BrowserRouter trabajará con las rutas relativas.
         <BrowserRouter> 
             <Layout>
                 <Routes>
